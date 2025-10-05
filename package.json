@@ -21,8 +21,8 @@
   "preferences": [
     {
       "name": "bashTerminal",
-      "title": "Bash Terminal to call",
-      "description": "What to call your script with?",
+      "title": "Bash Terminal to use",
+      "description": "What do you wantto call your script with?",
       "required": false,
       "type": "textfield"
     },

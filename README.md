@@ -8,7 +8,7 @@ See what packages are available for update using `pacman-contrib`.
 
 ## Features
 
-- Display a list of packages available for update.
+- Display a list of packages available for update for arch based distributions.
 - Set a bash terminal and script in the extension settings.
   - Use your own script to update your packages from the action menu!
 
@@ -50,7 +50,7 @@ This produces a production bundle that can be distributed/installed per Vicinae 
 
 ## BYO Update Script
 
-You can set the extension settings mentioned above and a new action will appear in the action menu that allows you to run your own script in a new bash terminal window of your choosing.
+You can set the extension settings mentioned above and a new action will appear in the action menu that allows you to run your own script in a new bash terminal of your choosing.
 
 <img src="assets/scriptaction.png" alt="Script Action" width="500" />
 

@@ -15,7 +15,7 @@ export type Pkg = {
 
 export async function fetchCheckupdates(): Promise<Pkg[]> {
   try {
-    const { stdout } = await execp(`bash -lc "checkupdates || true"`);
+    const { stdout } = await execp(`bash -lc "checkupdates"`);
     const lines = stdout.trim().split("\n").filter(Boolean);
     return lines.map((line) => {
       // Parse "name current -> available"
