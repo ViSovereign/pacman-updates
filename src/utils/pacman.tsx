@@ -15,7 +15,13 @@ export type Pkg = {
 
 export async function fetchCheckupdates(): Promise<Pkg[]> {
   try {
-    const { stdout } = await execp(`bash -lc "checkupdates"`);
+    const { stdout: exists } = await execp(
+      `bash -lc "command -v checkupdates || echo ''"`,
+    );
+    if (!exists.trim()) {
+      throw new Error("checkupdates not found. Install pacman-contrib.");
+    }
+    const { stdout } = await execp(`bash -lc "checkupdates || true"`);
     const lines = stdout.trim().split("\n").filter(Boolean);
     return lines.map((line) => {
       // Parse "name current -> available"
